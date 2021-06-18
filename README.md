@@ -60,4 +60,3 @@ pip install requirments.txt
  ![](https://github.com/hanluyt/ViT_pytorch_assignment/raw/main/Image/attention.png)
  
  
-
