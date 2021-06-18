@@ -26,7 +26,7 @@ Usage
 -----
 **1. Download Pre-trained models (Google's Official Checkpoint)**
 * Imagenet-21K pre-trained models
-  *  R50+ViT-B_16, ResNet-50x3
+  *  R50+ViT-B_16, BiT-M-R50x3
  ```
  wget https://storage.googleapis.com/vit_models/imagenet21k/{model_name}.npz
  ```
