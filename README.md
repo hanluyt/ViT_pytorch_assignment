@@ -30,3 +30,34 @@ Usage
  ```
 **2. Installation** <br>
 Make sure you have Python>=3.6 installed on your machine.
+ ```
+pip install requirments.txt
+ ```
+ **3. Train Model** <br>
+ * R50+ViT-B_16
+  ```
+  python train_vit_b.py --name cifar10-100_500 --dataset cifar10 --model_type R50-ViT-B_16 --pretrained_dir checkpoint/imagenet21k_R50+ViT-B_16.npz --train_batch_size 64
+ ```
+ CIFAR-10 or CIFAR-100 are automatically download and train.
+ 
+ We adjust the value of --train_batch_size from 512 to 64 because GPU memory is insufficient.
+ 
+ Also can use Automatic Mixed Precision(Amp) to reduce memory usage and train faster
+   ```
+  python train_vit_b.py --name cifar10-100_500 --dataset cifar10 --model_type R50-ViT-B_16 --pretrained_dir checkpoint/imagenet21k_R50+ViT-B_16.npz --train_batch_size 64 --fp16 --fp16_opt_level O2
+ ```
+ *  ResNet50x3_Params
+  ```
+  python train_resnet.py --name cifar10-100_500 --dataset cifar10 --pretrained_dir BiT-M-R50x3.npz --train_batch_size 64 --fp16 --fp16_opt_level O2
+ ```
+ *  ResNet50x3_Flops
+   ```
+  python train_flops.py --name cifar10-100_500 --dataset cifar10 --pretrained_dir BiT-M-R50x3.npz --train_batch_size 64 --fp16 --fp16_opt_level O2
+ ```
+ Visualization
+ ------
+ The attention map for the input image can be visualized through the attention score of self-attention.
+ ![](https://github.com/hanluyt/ViT_pytorch_assignment/raw/main/Image/attention.png)
+ 
+ 
+
