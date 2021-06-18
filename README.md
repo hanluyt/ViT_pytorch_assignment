@@ -1,6 +1,7 @@
 Hybrid Structure of ViT and ResNet50x3
 ===========
 In this repository, we implement three models: R50x1-ViT-B_16, ResNet50x3_Params and ResNet50x3_Flops.
+You can download the trained model’s learned parameters from [Baidu Yun](https://pan.baidu.com/s/1pGI4YGtXugMtZ5F4LYYQ7Q#list/path=%2Fmodel_params)  Extraction code: yytt
 
 Table of Contents
 ---------
